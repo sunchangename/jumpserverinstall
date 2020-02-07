@@ -70,7 +70,8 @@ echo -e "\033[31m 5. 启动 Jumpserver \033[0m" \
   
 echo -e "\033[31m 6. 配置自启 \033[0m" \
   && if [ ! -f "/usr/lib/systemd/system/jms.service" ]; then wget -O /usr/lib/systemd/system/jms.service https://demo.jumpserver.org/download/shell/centos/jms.service; chmod 755 /usr/lib/systemd/system/jms.service; systemctl enable jms; fi
-  
+
+echo -e "\033[31m 7. 重启guacamole \033[0m" \
 docker stop jms_guacamole
 sleep 10
 docker start jms_guacamole
