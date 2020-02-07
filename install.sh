@@ -36,10 +36,10 @@ echo -e "\033[31m 3. 下载组件 \033[0m" \
   && pip install --upgrade pip setuptools -i https://mirrors.aliyun.com/pypi/simple/ \
   && pip install -r /opt/jumpserver/requirements/requirements.txt -i https://mirrors.aliyun.com/pypi/simple/ \
   && curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io \
-  && pip install pyasn1===0.4.6
-  && pip install django===2.2
-  && pip install future===0.16.0
-  && pip install cryptography===2.7
+  && pip install pyasn1===0.4.6 \
+  && pip install django===2.2 \
+  && pip install future===0.16.0 \
+  && pip install cryptography===2.7 \
   && systemctl restart docker \
   && docker pull wojiushixiaobai/jms_koko:1.5.6 \
   && docker pull wojiushixiaobai/jms_guacamole:1.5.6 \
